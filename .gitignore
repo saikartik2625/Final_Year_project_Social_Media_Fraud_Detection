@@ -1,0 +1,30 @@
+# Node.js
+node_modules/
+Project/frontend/node_modules/
+npm-debug.log
+yarn-error.log
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+venv/
+Project/backend/venv/
+env/
+.env
+.venv/
+Project/venv/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# OS / Misc
+.DS_Store
+Thumbs.db
+.sfdx/
+.keras/
+*.db
+Project/backend/*.db
+
+# You can add more files or folders to ignore here

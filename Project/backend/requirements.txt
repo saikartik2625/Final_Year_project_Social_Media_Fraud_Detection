@@ -1,0 +1,17 @@
+flask==3.1.2
+flask-cors==6.0.2
+pymongo[srv]==4.10.1
+werkzeug==3.1.5
+numpy<2.1.0,>=1.26.0
+pandas==2.3.3
+joblib==1.4.2
+scikit-learn==1.6.1
+tensorflow==2.18.0
+python-dotenv==1.1.0
+reportlab==4.4.0
+groq==0.23.1
+python-dateutil==2.9.0.post0
+requests==2.32.3
+gunicorn==21.2.0
+shap==0.46.0
+instaloader>=4.10.0

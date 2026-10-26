@@ -1,0 +1,270 @@
+/* =============================================
+   NAVBAR — BLACKOUT Cyber Architecture
+   Black + Electric Yellow Theme
+   ============================================= */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  height: 64px;
+  background: rgba(8, 10, 13, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+  transition: all 0.25s ease;
+}
+
+/* Subtle electric bottom line */
+.navbar::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(250, 204, 21, 0.3) 25%,
+    rgba(250, 204, 21, 0.6) 50%,
+    rgba(250, 204, 21, 0.3) 75%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+/* ── Brand / Logo ── */
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+
+.logo-icon-wrap {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  background: #12151A;
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all 0.25s ease;
+  box-shadow: 0 0 12px rgba(250, 204, 21, 0.12);
+}
+
+.logo-shield-icon {
+  color: var(--primary-accent);
+}
+
+.logo-zap-sub {
+  position: absolute;
+  top: 13px;
+  color: #080A0D;
+}
+
+.navbar-logo:hover .logo-icon-wrap {
+  border-color: var(--primary-accent);
+  box-shadow: 0 0 18px rgba(250, 204, 21, 0.35);
+  transform: translateY(-1px);
+}
+
+.logo-text-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-title {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+}
+
+.logo-highlight {
+  color: var(--primary-accent);
+}
+
+.logo-divider {
+  margin: 0 0.35rem;
+  color: var(--border-color);
+  font-weight: 400;
+}
+
+.logo-subtext {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  color: var(--text-secondary);
+}
+
+.logo-tagline {
+  font-size: 0.68rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  letter-spacing: 0.2px;
+}
+
+/* ── Navigation Links ── */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-link {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  padding: 0.45rem 0.85rem;
+  border-radius: var(--radius-sm);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.nav-link .nav-icon {
+  color: var(--text-secondary);
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: var(--text-primary);
+  background: var(--bg-card);
+  border-color: var(--border-color);
+}
+
+.nav-link:hover .nav-icon {
+  color: var(--primary-accent);
+}
+
+/* Active Nav state with electric yellow notch */
+.nav-link.active-link {
+  color: var(--primary-accent);
+  background: rgba(250, 204, 21, 0.08);
+  border-color: rgba(250, 204, 21, 0.25);
+  box-shadow: 0 0 12px rgba(250, 204, 21, 0.1);
+}
+
+.nav-link.active-link .nav-icon {
+  color: var(--primary-accent);
+}
+
+/* Auth Buttons */
+.nav-btn-login {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  padding: 0.45rem 0.95rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color);
+  background: var(--bg-card);
+  transition: all 0.2s ease;
+}
+
+.nav-btn-login:hover {
+  border-color: var(--primary-accent);
+  color: var(--primary-accent);
+}
+
+.nav-btn-register {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #080A0D;
+  background: var(--primary-accent);
+  border: 1px solid var(--primary-accent);
+  padding: 0.45rem 1rem;
+  border-radius: var(--radius-sm);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  box-shadow: 0 2px 10px rgba(250, 204, 21, 0.25);
+  transition: all 0.2s ease;
+}
+
+.nav-btn-register:hover {
+  background: var(--hover-accent);
+  border-color: var(--hover-accent);
+  box-shadow: 0 4px 16px rgba(250, 204, 21, 0.4);
+  transform: translateY(-1px);
+}
+
+.logout-btn {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.42rem 0.85rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all 0.2s ease;
+}
+
+.logout-btn:hover {
+  background: rgba(239, 68, 68, 0.12);
+  border-color: rgba(239, 68, 68, 0.35);
+  color: #f87171;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.theme-toggle:hover {
+  border-color: var(--primary-accent);
+  color: var(--primary-accent);
+  box-shadow: 0 0 10px rgba(250, 204, 21, 0.2);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 1rem;
+  }
+  .logo-tagline, .logo-divider, .logo-subtext {
+    display: none;
+  }
+  .navbar-links {
+    gap: 0.25rem;
+  }
+  .nav-link {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.82rem;
+  }
+}

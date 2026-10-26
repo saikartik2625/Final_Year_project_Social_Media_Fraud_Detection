@@ -1,0 +1,330 @@
+/* =============================================
+   SHAP FORCE PLOT — BLACKOUT THEME
+   Black + Electric Yellow Explainable AI Styling
+   ============================================= */
+
+.shap-section {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.7);
+  text-align: left;
+  animation: blackoutFadeIn 0.35s ease-out;
+  position: relative;
+}
+
+.shap-empty-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 2rem;
+  background: var(--bg-secondary);
+  border: 1px dashed var(--border-color);
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+}
+
+.shap-empty-icon {
+  color: var(--primary-accent);
+}
+
+.shap-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1.25rem;
+}
+
+.shap-badge-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  color: var(--primary-accent);
+  background: rgba(250, 204, 21, 0.1);
+  border: 1px solid rgba(250, 204, 21, 0.25);
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-sm);
+  margin-bottom: 0.45rem;
+}
+
+.shap-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin: 0.15rem 0 0.35rem 0;
+  letter-spacing: -0.3px;
+}
+
+.shap-subtitle {
+  font-size: 0.86rem;
+  color: var(--text-secondary);
+  margin: 0;
+  max-width: 620px;
+  line-height: 1.5;
+}
+
+/* Filters */
+.shap-filters {
+  display: flex;
+  gap: 0.4rem;
+  background: var(--bg-main);
+  padding: 0.3rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color);
+}
+
+.shap-filter-btn {
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.4rem 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all 0.2s ease;
+}
+
+.shap-filter-btn:hover {
+  color: var(--text-primary);
+}
+
+.shap-filter-btn.active {
+  background: var(--bg-elevated);
+  border-color: var(--border-color);
+  color: var(--primary-accent);
+}
+
+.dot-indicator {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.dot-red { background: #EF4444; box-shadow: 0 0 6px #EF4444; }
+.dot-green { background: #22C55E; box-shadow: 0 0 6px #22C55E; }
+
+/* Baseline Bar */
+.shap-baseline-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+.baseline-node {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.node-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--text-secondary);
+}
+
+.node-val {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.yellow-val {
+  color: var(--primary-accent);
+}
+
+.baseline-arrow {
+  color: var(--border-color);
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+/* Top 3 Drivers Highlight Grid */
+.shap-top-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.shap-top-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.shap-top-card.card-fraud {
+  border-left: 3px solid #EF4444;
+}
+
+.shap-top-card.card-genuine {
+  border-left: 3px solid #22C55E;
+}
+
+.top-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.top-card-rank {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+.top-card-pill {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.pill-fraud {
+  color: #f87171;
+  background: rgba(239, 68, 68, 0.12);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.pill-genuine {
+  color: #4ade80;
+  background: rgba(34, 197, 94, 0.12);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.top-card-feature {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.top-card-stat {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.stat-impact-val {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 800;
+}
+
+.card-fraud .stat-impact-val { color: #EF4444; }
+.card-genuine .stat-impact-val { color: #22C55E; }
+
+.top-card-snippet {
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* Chart Container */
+.shap-chart-container {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+}
+
+.chart-legend-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 0.75rem;
+  padding: 0 0.5rem;
+}
+
+.left-hint { color: #22C55E; }
+.right-hint { color: #EF4444; }
+.legend-center { color: var(--primary-accent); font-family: 'JetBrains Mono', monospace; }
+
+/* Custom Tooltip */
+.shap-tooltip {
+  background: #12151A;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.85);
+  max-width: 280px;
+}
+
+.shap-tooltip-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.35rem;
+}
+
+.shap-tooltip-name {
+  font-weight: 700;
+  color: #F3F4F6;
+  font-size: 0.85rem;
+}
+
+.shap-tooltip-val {
+  font-size: 0.75rem;
+  color: #9CA3AF;
+}
+
+.shap-tooltip-impact {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.88rem;
+  font-weight: 800;
+  margin-bottom: 0.35rem;
+}
+
+.shap-tooltip-desc {
+  font-size: 0.76rem;
+  line-height: 1.45;
+  color: #9CA3AF;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .shap-top-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .shap-baseline-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
